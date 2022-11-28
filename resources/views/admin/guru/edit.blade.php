@@ -8,7 +8,6 @@
 @endpush
 
 @section('content')
-
         <label>Input Galeri</label>
         <form method="POST" enctype="multipart/form-data" action="{{ route('admin.updateGuru', $guru->guru_id) }}"> 
         @csrf
@@ -26,12 +25,13 @@
                     </div>
                 </div>
             </div>
+
             <label>Status</label>
                         <select required="" class="form-control" name="status_id">
                         <option selected="" disabled="">- PILIH STATUS -</option>
-                        <option selected="selected">{{ $guru->status_id }}</option>
+                        
                         @foreach($status as $data)
-                            <option value="{{ $status->status_id }}">{{ $status->status_name }}</option>
+                        <option value="{{ $data->status_id }}" {{ ( $data->status_id == $guru->status_id) ? 'selected' : '' }}> {{ $data->status_name }} </option>
                         @endforeach
                         </select>
             <button type="submit" class="btn btn-primary">UPDATE</button>

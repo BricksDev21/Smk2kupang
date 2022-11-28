@@ -5,8 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use App\Models\Status;
-
 class Guru extends Model
 {
     use HasFactory;
@@ -18,6 +16,6 @@ class Guru extends Model
 
   public function status()
   {
-    return $this->belongsTo(Status::class);
+    return $this->belongsTo('App\Models\Status', 'status_id');
   }
 }

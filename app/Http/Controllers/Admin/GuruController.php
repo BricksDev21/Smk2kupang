@@ -61,8 +61,12 @@ class GuruController extends Controller
 
     public function edit($guru_id)
     {
-        $guru = Guru::findOrFail($guru_id);
-        return view('admin.guru.edit', ['guru' => $guru]);
+        $guruu = Guru::findOrFail($guru_id);
+        $status = Status::all();
+        return view('admin.guru.edit', [
+            'guru' => $guruu,
+            'status' => $status
+        ]);
     }
 
     public function update(Request $request, $guru_id)

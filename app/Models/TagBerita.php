@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class TagBerita extends Model
 {
     use HasFactory;
-    protected $table = 'status';
-    protected $primaryKey = 'status_id';
+    protected $table = 'tag_berita';
+    protected $primaryKey = 'tag_id';
     protected $fillable = [
-		'status_name'
-	];
+		'tag_name'
+  ];
 }

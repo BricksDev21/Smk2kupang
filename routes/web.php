@@ -41,10 +41,31 @@ Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middlewar
 
     Route::get('StatusGuru', [App\Http\Controllers\Admin\StatusController::class, 'index'])->name('status');
     Route::get('InputStatus', [App\Http\Controllers\Admin\StatusController::class, 'create'])->name('inputStatus');
-    Route::post('InsertStatus', [App\Http\Controllers\Admin\statusController::class, 'store'])->name('insertStatus');
-    Route::delete('DeleteStatus/{status}', [App\Http\Controllers\Admin\statusController::class, 'destroy'])->name('deleteStatus');
+    Route::post('InsertStatus', [App\Http\Controllers\Admin\StatusController::class, 'store'])->name('insertStatus');
+    Route::delete('DeleteStatus/{status}', [App\Http\Controllers\Admin\StatusController::class, 'destroy'])->name('deleteStatus');
     Route::get('EditStatus/{status}', [App\Http\Controllers\Admin\StatusController::class, 'edit'])->name('editStatus');
     Route::put('UpdateStatus/{status}/edit', [App\Http\Controllers\Admin\StatusController::class, 'update'])->name('updateStatus');
+
+    Route::get('KategoriBerita', [App\Http\Controllers\Admin\KategoriController::class, 'index'])->name('kategori');
+    Route::get('InputKategori', [App\Http\Controllers\Admin\KategoriController::class, 'create'])->name('inputKategori');
+    Route::post('InsertKategori', [App\Http\Controllers\Admin\KategoriController::class, 'store'])->name('insertKategori');
+    Route::delete('DeleteKategori/{kategori}', [App\Http\Controllers\Admin\KategoriController::class, 'destroy'])->name('deleteKategori');
+    Route::get('EditKategori/{kategori}', [App\Http\Controllers\Admin\KategoriController::class, 'edit'])->name('editKategori');
+    Route::put('UpdateKategori/{kategori}/edit', [App\Http\Controllers\Admin\KategoriController::class, 'update'])->name('updateKategori');
+
+    Route::get('TagBerita', [App\Http\Controllers\Admin\TagController::class, 'index'])->name('tag');
+    Route::get('InputTag', [App\Http\Controllers\Admin\TagController::class, 'create'])->name('inputTag');
+    Route::post('InsertTag', [App\Http\Controllers\Admin\TagController::class, 'store'])->name('insertTag');
+    Route::delete('DeleteTag/{tag}', [App\Http\Controllers\Admin\TagController::class, 'destroy'])->name('deleteTag');
+    Route::get('EditTag/{tag}', [App\Http\Controllers\Admin\TagController::class, 'edit'])->name('editTag');
+    Route::put('UpdateTag/{tag}/edit', [App\Http\Controllers\Admin\TagController::class, 'update'])->name('updateTag');
+
+    Route::get('Berita', [App\Http\Controllers\Admin\BeritaController::class, 'index'])->name('berita');
+    Route::get('InputBerita', [App\Http\Controllers\Admin\BeritaController::class, 'create'])->name('inputBerita');
+    Route::post('InsertBerita', [App\Http\Controllers\Admin\BeritaController::class, 'store'])->name('insertBerita');
+    Route::delete('DeleteBerita/{berita}', [App\Http\Controllers\Admin\BeritaController::class, 'destroy'])->name('deleteBerita');
+    Route::get('EditBerita/{berita}', [App\Http\Controllers\Admin\BeritaController::class, 'edit'])->name('editBerita');
+    Route::put('UpdateBerita/{berita}/edit', [App\Http\Controllers\Admin\BeritaController::class, 'update'])->name('updateBerita');
 });
 
 Route::group(['as'=>'siswa.','prefix' => 'siswa','namespace'=>'siswa','middleware'=>['auth','siswa']], function () {

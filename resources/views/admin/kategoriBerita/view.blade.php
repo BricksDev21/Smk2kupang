@@ -4,23 +4,15 @@
 <br>
     <table>
         <tbody>
-            <a href="{{ route('admin.inputGuru') }}" class="btn btn-md btn-success mb-3">TAMBAH GURU</a>
-            @forelse ($guru as $data)
+            <a href="{{ route('admin.inputKategori') }}" class="btn btn-md btn-success mb-3">TAMBAH KATEGORI BERITA</a>
+            @forelse ($kategori as $data)
                 <tr>
-                    <td class="text-center">
-                        <img src="{{ Storage::url('public/guru/').$data->gambar }}" class="rounded" style="width: 150px">
-                    </td>
-                </tr>
-                <tr>
-                    <td>{!! $data->nama !!}</td>
-                </tr>
-                <tr>
-                    <td>{{ $data->status['status_name'] }}</td>
+                    <td style="border: 1px solid;">{!! $data->kategori_name !!}</td>
                 </tr>
                 <tr>
                     <td>
-                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('admin.deleteGuru', $data->guru_id) }}" method="POST">
-                        <a href="{{ route('admin.editGuru', $data->guru_id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('admin.deleteKategori', $data->kategori_id) }}" method="POST">
+                        <a href="{{ route('admin.editKategori', $data->kategori_id) }}" class="btn btn-sm btn-primary">EDIT</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit">HAPUS</button>
@@ -29,11 +21,11 @@
                 </tr>
                 @empty
                 <div>
-                    Data Guru belum Tersedia.
+                    Data kategori belum Tersedia.
                 </div>
             @endforelse
         </tbody>
-    </table> 
+    </table>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
