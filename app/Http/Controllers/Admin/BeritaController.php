@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Berita;
-use App\Models\TagBerita;
+use App\Models\Tag;
 use App\Models\KategoriBerita;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,7 +14,7 @@ class BeritaController extends Controller
     public function index()
     {
         $berita = Berita::latest()->paginate(10);
-        $tag = TagBerita::all();
+        $tag = Tag::all();
         $kategori = KategoriBerita::all();
         return view('admin.berita.view', [
             'berita' => $berita,
@@ -26,7 +26,7 @@ class BeritaController extends Controller
     public function create()
     {
         $kategori = KategoriBerita::all();
-        $tag = TagBerita::all();
+        $tag = Tag::all();
         return view('admin.berita.input', [
             'kategories' => $kategori,
             'tags' => $tag
@@ -74,7 +74,7 @@ class BeritaController extends Controller
     {
         $berita = Berita::findOrFail($berita_id);
         $kategori = KategoriBerita::all();
-        $tag = TagBerita::all();
+        $tag = Tag::all();
         return view('admin.berita.edit', [
             'berita' => $berita,
             'tag' => $tag,

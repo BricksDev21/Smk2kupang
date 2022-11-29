@@ -16,7 +16,7 @@ class Berita extends Model
 
     public function tagBerita()
     {
-      return $this->belongsTo('App\Models\TagBerita', 'tag_id');
+      return $this->belongsTo('App\Models\Tag', 'tag_id');
     }
   
     public function kategoriBerita()
