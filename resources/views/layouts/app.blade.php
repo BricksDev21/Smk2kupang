@@ -24,17 +24,6 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
-<<<<<<< HEAD
-    <br><br>
-    <a href="{{ route('admin.galeri') }}" class="btn btn-md btn-success mb-3">Galeri</a><br>
-    <a href="{{ route('admin.guru') }}" class="btn btn-md btn-success mb-3">Tenaga Pendidik</a><br>
-    <a href="{{ route('admin.status') }}" class="btn btn-md btn-success mb-3">Status Guru</a><br>
-    <a href="{{ route('admin.kategori') }}" class="btn btn-md btn-success mb-3">Kategori Berita</a><br>
-    <a href="{{ route('admin.tag') }}" class="btn btn-md btn-success mb-3">Tag</a><br>
-    <a href="{{ route('admin.berita') }}" class="btn btn-md btn-success mb-3">Berita</a><br>
-    <a href="{{ route('admin.pengumuman') }}" class="btn btn-md btn-success mb-3">Pengumuman</a><br>
-    <a href="{{ route('admin.modul') }}" class="btn btn-md btn-success mb-3">Modul</a><br>
-=======
     
     <!-- DRAWER -->
     <div class="w-full flex items-center sm:justify-start justify-between sm:gap-10">
@@ -154,7 +143,6 @@
         </nav>
     <!-- END OF DRAWER -->
 
->>>>>>> 7661521e9eaddce1c1f0dab61a6e1c869d092488
     <main class="py-4">
         @yield('content')
     </main>
