@@ -1,57 +1,52 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://picsum.photos/50">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        poppins: ['Poppins'],
-                    },
-                    container: {
-                        padding: {
-                            DEFAULT: '2rem',
-                            sm: '2rem',
-                            lg: '4rem',
-                            xl: '6rem',
-                            '2xl': '8rem',
-                            center: true
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        #mode:checked ~ label div.toggle {
-            @apply translate-x-7 transition
-        }
-    </style>
-    <title>SMKN 2 Kupang</title>
-</head>
 <div class="container mx-auto mt-10 mb-20">
 
     <!-- NAVIGATION -->
     <nav class="mb-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-between">
 
         <!-- navigation-add-news -->
-        <button class="w-full col-span-1 md:col-span-3 lg:col-span-1 flex items-center gap-3 bg-sky-500 p-6 rounded-2xl shadow-xl hover:translate-y-1 hover:shadow-lg transition-all">
+        <button class="w-full col-span-1 md:col-span-3 lg:col-span-1 flex items-center gap-3 bg-sky-500 p-6 rounded-2xl shadow-xl hover:translate-y-1 hover:shadow-lg transition-all" data-modal-toggle="add">
             <i class="bi bi-plus-circle fa-lg text-white"></i>
-            <span class="text-sm font-medium text-white">Posting Berita</span>
+            <span class="text-sm font-medium text-white">Tambah Agenda Baru</span>
         </button>
+        <div id="add" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
+            <div class="relative w-full max-w-md h-full md:h-auto">
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-900 dark:hover:text-white" data-modal-toggle="add">
+                        <i class="bi bi-x-lg fa-xl"></i>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                    <div class="py-6 px-6 lg:px-8">
+                        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Ubah Agenda</h3>
+                        <form class="space-y-6" action="#">
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    <label for="name" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Nama Agenda</label>
+                                    <input type="text" id="name" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                </div>
+                                <div>
+                                    <label for="description" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Deskripsi Agenda</label>
+                                    <textarea id="description" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400"></textarea>
+                                </div>
+                                <div>
+                                    <label for="date" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Tanggal Pelaksanaan</label>
+                                    <input type="date" id="date" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                </div>
+                                <div>
+                                    <label for="time" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Waktu Pelaksanaan</label>
+                                    <input type="time" id="time" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                </div>
+
+                                <!-- form-button -->
+                                <button class="py-4 w-full rounded-xl bg-sky-500 hover:bg-sky-600 font-semibold text-white">
+                                    Ubah Pengaturan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
         <span class="text-center md:text-right text-sm text-gray-500">Urut Berdasarkan</span>
 
         <!-- navigation-dropdown -->
@@ -116,22 +111,65 @@
         <div class="h-fit w-full p-6 flex justify-between gap-4 md:gap-20 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl">
             <div class="flex flex-col gap-2">
                 <div class="text-xs text-gray-500 flex items-center gap-2">
-                    <span>Postingan</span>
-                    <div class="h-1 w-1 rounded-full bg-gray-500"></div>
-                    <time>7 jam yang lalu</time>
+                    Agenda Sekolah
                 </div>
                 <h1 class="text-lg font-bold dark:text-white">
-                    Penerimaan Siswa Baru TA. 2022/2023
+                    Webinar Augmented Reality
                 </h1>
+                <div class="text-xs font-medium flex items-center gap-2 dark:text-white">
+                    <time>Senin, 16 November 2022</time>
+                    <div class="h-1 w-1 rounded-full bg-gray-500 dark:bg-white"></div>
+                    <time>12:30:40</time>
+                </div>
+                <span class="text-xs font-medium text-gray-500">Deskripsi</span>
                 <p class="text-xs font-medium text-gray-600 dark:text-gray-400">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mi ipsum, condimentum quis dui in, fermentum dictum neque. Donec dictum blandit dolor quis elementum. Aenean gravida pellentesque tellus sit amet porta. In nisi ex, lobortis et tincidunt eu, efficitur vitae mauris. Integer suscipit rhoncus leo, eu dignissim mi rutrum et. 
                 </p>
             </div>
             <div class="flex flex-col items-center justify-between">
-                <button class="flex flex-col items-center gap-2 group" type="button">
+                <button class="flex flex-col items-center gap-2 group" type="button" data-modal-toggle="edit">
                     <i class="bi bi-pen fa-xl text-gray-500 block group-hover:hidden transition-all"></i>
                     <i class="bi bi-pen-fill fa-xl text-gray-500 hidden group-hover:block transition-all"></i>
                 </button>
+                <div id="edit" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full max-w-md h-full md:h-auto">
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+                            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-900 dark:hover:text-white" data-modal-toggle="edit">
+                                <i class="bi bi-x-lg fa-xl"></i>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                            <div class="py-6 px-6 lg:px-8">
+                                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Ubah Agenda</h3>
+                                <form class="space-y-6" action="#">
+                                    <div class="flex flex-col gap-6">
+                                        <div>
+                                            <label for="name" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Nama Agenda</label>
+                                            <input type="text" id="name" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                        </div>
+                                        <div>
+                                            <label for="description" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Deskripsi Agenda</label>
+                                            <textarea id="description" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400"></textarea>
+                                        </div>
+                                        <div>
+                                            <label for="date" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Tanggal Pelaksanaan</label>
+                                            <input type="date" id="date" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                        </div>
+                                        <div>
+                                            <label for="time" class="block mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">Waktu Pelaksanaan</label>
+                                            <input type="time" id="time" class="p-4 w-full text-gray-900 bg-gray-200 rounded-xl border-none sm:text-md focus:ring-sky-500 focus:border-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-400 dark:focus:border-sky-400">
+                                        </div>
+
+                                        <!-- form-button -->
+                                        <button class="py-4 w-full rounded-xl bg-sky-500 hover:bg-sky-600 font-semibold text-white">
+                                            Ubah Pengaturan
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
                 <button class="flex flex-col items-center gap-2 group" type="button" data-modal-toggle="delete">
                     <i class="bi bi-trash fa-xl text-gray-500 block group-hover:hidden transition-all"></i>
                     <i class="bi bi-trash-fill fa-xl text-gray-500 hidden group-hover:block transition-all"></i>
@@ -168,7 +206,7 @@
 
     <!-- INDICATOR -->
     <div class="container mx-auto w-full flex flex-col md:flex-row mt-20 gap-5 items-center justify-end">
-        <span class="text-sm font-light text-gray-500">menampilkan 9 dari 25 berita</span>
+        <span class="text-sm font-light text-gray-500">menampilkan 9 dari 25 event</span>
         <div class="flex gap-2">
 
             <!-- indicator-left -->
@@ -198,4 +236,3 @@
         </div>
     </div>
 </div>
-</html>
