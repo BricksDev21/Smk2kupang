@@ -7,11 +7,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- CDN -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
-  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script> -->
-  <!-- CDN -->
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 
 </head>
 <body class="w-screen h-screen m-auto bg-blue-700">
@@ -28,5 +24,5 @@
     </button>
   </div>
 
-</body>
+</body>j
 </html>
