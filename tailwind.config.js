@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+<<<<<<< HEAD
     ".resources/**/*.{blade.php, vue, js}",
+=======
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+>>>>>>> 7661521e9eaddce1c1f0dab61a6e1c869d092488
     "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'class',
