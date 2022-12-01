@@ -22,8 +22,10 @@
     <a href="{{ route('admin.guru') }}" class="btn btn-md btn-success mb-3">Tenaga Pendidik</a><br>
     <a href="{{ route('admin.status') }}" class="btn btn-md btn-success mb-3">Status Guru</a><br>
     <a href="{{ route('admin.kategori') }}" class="btn btn-md btn-success mb-3">Kategori Berita</a><br>
-    <a href="{{ route('admin.tag') }}" class="btn btn-md btn-success mb-3">Tag Berita</a><br>
+    <a href="{{ route('admin.tag') }}" class="btn btn-md btn-success mb-3">Tag</a><br>
     <a href="{{ route('admin.berita') }}" class="btn btn-md btn-success mb-3">Berita</a><br>
+    <a href="{{ route('admin.pengumuman') }}" class="btn btn-md btn-success mb-3">Pengumuman</a><br>
+    <a href="{{ route('admin.modul') }}" class="btn btn-md btn-success mb-3">Modul</a><br>
     <main class="py-4">
         @yield('content')
     </main>

@@ -53,7 +53,7 @@ Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middlewar
     Route::get('EditKategori/{kategori}', [App\Http\Controllers\Admin\KategoriController::class, 'edit'])->name('editKategori');
     Route::put('UpdateKategori/{kategori}/edit', [App\Http\Controllers\Admin\KategoriController::class, 'update'])->name('updateKategori');
 
-    Route::get('TagBerita', [App\Http\Controllers\Admin\TagController::class, 'index'])->name('tag');
+    Route::get('Tag', [App\Http\Controllers\Admin\TagController::class, 'index'])->name('tag');
     Route::get('InputTag', [App\Http\Controllers\Admin\TagController::class, 'create'])->name('inputTag');
     Route::post('InsertTag', [App\Http\Controllers\Admin\TagController::class, 'store'])->name('insertTag');
     Route::delete('DeleteTag/{tag}', [App\Http\Controllers\Admin\TagController::class, 'destroy'])->name('deleteTag');
@@ -66,6 +66,20 @@ Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middlewar
     Route::delete('DeleteBerita/{berita}', [App\Http\Controllers\Admin\BeritaController::class, 'destroy'])->name('deleteBerita');
     Route::get('EditBerita/{berita}', [App\Http\Controllers\Admin\BeritaController::class, 'edit'])->name('editBerita');
     Route::put('UpdateBerita/{berita}/edit', [App\Http\Controllers\Admin\BeritaController::class, 'update'])->name('updateBerita');
+
+    Route::get('Pengumuman', [App\Http\Controllers\Admin\PengumumanController::class, 'index'])->name('pengumuman');
+    Route::get('InputPengumuman', [App\Http\Controllers\Admin\PengumumanController::class, 'create'])->name('inputPengumuman');
+    Route::post('InsertPengumuman', [App\Http\Controllers\Admin\PengumumanController::class, 'store'])->name('insertPengumuman');
+    Route::delete('DeletePengumuman/{pengumuman}', [App\Http\Controllers\Admin\PengumumanController::class, 'destroy'])->name('deletePengumuman');
+    Route::get('EditPengumuman/{pengumuman}', [App\Http\Controllers\Admin\PengumumanController::class, 'edit'])->name('editPengumuman');
+    Route::put('UpdatePengumuman/{pengumuman}/edit', [App\Http\Controllers\Admin\PengumumanController::class, 'update'])->name('updatePengumuman');
+
+    Route::get('Modul', [App\Http\Controllers\Admin\ModulController::class, 'index'])->name('modul');
+    Route::get('InputModul', [App\Http\Controllers\Admin\ModulController::class, 'create'])->name('inputModul');
+    Route::post('InsertModul', [App\Http\Controllers\Admin\ModulController::class, 'store'])->name('insertModul');
+    Route::delete('DeleteModul/{modul}', [App\Http\Controllers\Admin\ModulController::class, 'destroy'])->name('deleteModul');
+    Route::get('EditModul/{modul}', [App\Http\Controllers\Admin\ModulController::class, 'edit'])->name('editModul');
+    Route::put('UpdateModul/{modul}/edit', [App\Http\Controllers\Admin\ModulController::class, 'update'])->name('updateModul');
 });
 
 Route::group(['as'=>'siswa.','prefix' => 'siswa','namespace'=>'siswa','middleware'=>['auth','siswa']], function () {
