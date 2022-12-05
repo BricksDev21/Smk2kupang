@@ -61,9 +61,14 @@
                     <div id="drawer-body-scrolling" class="fixed z-40 h-screen flex flex-col justify-between overflow-y-auto rounded-r-3xl bg-white w-80 dark:bg-gray-800 transition-transform left-0 top-0 -translate-x-full" tabindex="-1" aria-labelledby="drawer-body-scrolling-label" aria-hidden="true">
                         <div>
                             <div class="flex justify-between items-center p-3">
-                                <span id="drawer-body-scrolling-label" class="p-3 text-xl font-semibold text-gray-500 uppercase dark:text-gray-400">
-                                    Bursa Kerja SMK
-                                </span>
+                                <div class="flex flex-shrink-0 gap-2 items-center">
+                                    <div class="h-12 w-12 overflow-hidden">
+                                        <img src="https://picsum.photos/50" alt="logo" class="h-full w-full object-cover">
+                                    </div>
+                                    <span id="drawer-body-scrolling-label" class="p-3 text-xl font-semibold text-gray-500 uppercase dark:text-gray-400">
+                                        SMKN 2 KUPANG
+                                    </span>
+                                </div>
                                 <button type="button" data-drawer-dismiss="drawer-body-scrolling" aria-controls="drawer-body-scrolling" class="p-3 flex items-center text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-xl text-sm dark:hover:bg-gray-600 dark:hover:text-white">
                                     <i class="bi bi-x-lg fa-xl"></i>
                                 </button>
@@ -79,7 +84,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="{{ route('admin.pengumuman') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <i class="bi bi-megaphone fa-lg"></i>
                                             <span class="text-base font-medium">Pengumuman</span>
                                         </a>
@@ -94,45 +99,66 @@
                                         </button>
                                         <ul id="dropdown-news" class="hidden">
                                             <li>
-                                                <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                <a href="{{ route('admin.daftar-berita') }}" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                                     <span class="text-base font-medium">Daftar Berita</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                <a href="{{ route('admin.komentar-berita') }}" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                                     <span class="text-base font-medium">Komentar</span>
                                                 </a>
                                             </li>
                                         </ul>
-                                     </li>
+                                    </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="{{ route('admin.agenda') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <i class="bi bi-app-indicator fa-lg"></i>
                                             <span class="text-base font-medium">Agenda Sekolah</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <i class="bi bi-image fa-lg"></i>
-                                            <span class="text-base font-medium">Galeri</span>
-                                        </a>
+                                        <button type="button" class="group w-full flex items-center justify-between gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" aria-controls="dropdown-gallery" data-collapse-toggle="dropdown-gallery">
+                                            <div class="flex gap-5 items-center">
+                                                <i class="bi bi-image fa-lg"></i>
+                                                <span class="text-base font-medium" sidebar-toggle-item>Galeri</span>
+                                            </div>
+                                            <i class="bi bi-chevron-down fa-lg"></i>
+                                        </button>
+                                        <ul id="dropdown-gallery" class="hidden">
+                                            <li>
+                                                <a href="{{ route('admin.album-galeri') }}" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                    <span class="text-base font-medium">Album Sekolah</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('admin.komentar-galeri') }}" class="flex items-center gap-5 py-5 pr-5 pl-20 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                                    <span class="text-base font-medium">Komentar</span>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="{{ route('admin.modul') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <i class="bi bi-journals fa-lg"></i>
                                             <span class="text-base font-medium">Modul</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="{{ route('admin.event') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <i class="bi bi-calendar-check fa-lg"></i>
                                             <span class="text-base font-medium">Event</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <a href="{{ route('admin.prestasi') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <i class="bi bi-trophy fa-lg"></i>
                                             <span class="text-base font-medium">Prestasi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.kategori') }}" class="flex items-center gap-5 py-5 pr-5 pl-10 text-base font-normal text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <i class="bi bi-boxes fa-lg"></i>
+                                            <span class="text-base font-medium">Kategroi</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -157,7 +183,6 @@
                         </ul>
                     </div>
                 </nav>
-
                 <!-- TITLE -->
                 <div class="text-3xl font-semibold text-sky-500">
                     Edit Album
@@ -396,6 +421,37 @@
                         </button>
                     </div>
                 </form>
+                <button class="w-full mt-0 lg:mt-10 flex flex-col items-center justify-center lg:justify-end gap-2 group" type="button" data-modal-toggle="delete">
+                    <i class="bi bi-trash fa-xl text-gray-500 block group-hover:hidden transition-all"></i>
+                    <i class="bi bi-trash-fill fa-xl text-gray-500 hidden group-hover:block transition-all"></i>
+                    <span>Hapus Item</span>
+                </button>
+                <div id="delete" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full max-w-md h-full md:h-auto">
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="delete">
+                                <i class="bi bi-x-lg fa-xl"></i>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                            <div class="p-6 text-center flex flex-col items-center gap-6">
+                                <div class="h-14 w-14 border-4 border-gray-500 rounded-full flex items-center justify-center">
+                                    <i class="bi bi-exclamation-lg fa-2xl text-gray-500"></i>
+                                </div>
+                                <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+                                    Anda yakin ingin menghapus item ini?
+                                </h3>
+                                <div class="flex items-center gap-4">
+                                    <button data-modal-toggle="delete" type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                                        Hapus
+                                    </button>
+                                    <button data-modal-toggle="delete" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                        Batal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

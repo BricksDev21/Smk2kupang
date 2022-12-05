@@ -69,22 +69,8 @@
                             <div class="p-2 z-10 hidden absolute top-9 text-xs font-light text-white align-middle bg-gray-800 rounded-md shadow-lg peer-hover:hidden dark:peer-hover:block transition">Mode&nbspgelap</div>
                         </li>
                     </ul>
-                    <ul class="flex items-center gap-6 text-xs">
-                        <li>
-                            <a href="#" class="active:font-bold">Pendaftaran</a>
-                        </li>
-                        <li>
-                            <a href="#" class="active:font-bold">Pusat Informasi</a>
-                        </li>
-                        <li>
-                            <a href="#" class="active:font-bold">Tata Usaha</a>
-                        </li>
-                        <li>
-                            <a href="#" class="active:font-bold">E-Learning</a>
-                        </li>
-                        <li>
-                            <a href="#" class="active:font-bold">Login/Register</a>
-                        </li>
+                    <ul class="flex items-center text-xs">
+                        adminsmkn2kupang@gmail.com
                     </ul>
                 </div>
             </nav>
@@ -197,137 +183,231 @@
         <div class="h-screen relative flex flex-col md:items-center justify-center bg-cover rounded-b-3xl overflow-hidden">
             <div class="absolute h-full w-full -z-10 bg-gradient-to-b from-transparent to-black/50"></div>
             <img src="https://picsum.photos/1920/1080" alt="cover" class="h-full w-full object-cover -z-20 absolute">
-            <span class="text-white text-sm md:text-xl mx-5 lg:mx-0 font-light mb-2">Pintasan</span>
-            <span class="w-fit text-white text-4xl md:text-6xl mx-5 lg:mx-0 font-bold px-5 py-1 bg-sky-500/50">Jurusan</span>
+            <span class="text-white text-sm md:text-xl mx-5 lg:mx-0 font-light mb-2">Akademik</span>
+            <span class="w-fit text-white text-4xl md:text-6xl mx-5 lg:mx-0 font-bold px-5 py-1 bg-sky-500/50">Pusat Modul</span>
         </div>
-        <div class="container m-auto mx-auto flex flex-col -translate-y-40 -mb-40">
-            
-            <!-- MAJOR -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7">
 
-                <!-- major-card -->
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
+        <!-- MODUL -->
+        <div class="container relative mx-auto flex gap-20 items-start justify-between -translate-y-36 -mb-36">
+
+            <!-- modul-sidebar -->
+            <div class="relative hidden xl:flex flex-col gap-5 items-start">
+
+                <!-- modul-search -->
+                <div class="mb-10 mt-20">
+                    <form class="flex items-center">   
+                        <label for="simple-search" class="sr-only">Search</label>
+                        <div class="relative w-full">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <i class="bi bi-search dark:text-white"></i>
+                            </div>
+                            <input type="text" id="simple-search" class="bg-gray-50 border-none border-gray-300 text-gray-900 text-sm rounded-full focus:ring-sky-500 focus:border-sky-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white" placeholder="Cari Modul" required="">
                         </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
+                        <button type="submit" class="py-2.5 px-3 ml-2 text-sm font-medium text-white bg-sky-500 hover:bg-sky-600 rounded-full border-none focus:ring-4 focus:outline-none focus:ring-sky-300">
+                            <i class="bi bi-search"></i>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
-                </div>
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
-                </div>
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
-                </div>
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
-                </div>
-                <div class="h-96 md:h-72 lg:h-96 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group hover:translate-y-2 hover:shadow-xl transition-all">
-                    <div class="h-1/3 md:h-1/2 lg:h-1/3 m-6 rounded-2xl relative overflow-hidden">
-                        <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
-                        <div class="h-full w-full absolute top-0 bg-gradient-to-b from-transparent to-black/50">
-                            <button class="absolute right-6 top-6 px-3 py-2 rounded-lg text-white bg-sky-500 cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-300 hover:text-black dark:text-black dark:hover:text-white dark:focus:ring-sky-300">
-                                <i class="bi bi-arrow-up-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="m-6 flex flex-col gap-4 dark:text-white">
-                        <span class="text-2xl font-semibold">
-                            Kontruksi Gedung & Sanitasi Perairan
-                        </span>
-                        <span class="leading-7">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, natus?
-                        </span>
-                    </div>
-                </div>
+
+                <!-- modul-sidebar-title -->
+                <h1 class="pl-2 md:pl-3 border-l-4 text-base md:text-xl border-sky-500 text-gray-800 dark:text-white font-medium md:font-semibold">
+                    Kategori Modul
+                </h1>
+
+                <ul class="pl-4 flex flex-col gap-3 text-xl font-medium">
+                    <li class="active:font-bold hover:text-sky-500 dark:text-white dark:hover:text-sky-400 transition-colors">
+                        <a href="">Semua</a>
+                    </li>
+                    <li class="active:font-bold hover:text-sky-500 dark:text-white dark:hover:text-sky-400 transition-colors">
+                        <a href="">Terbaru</a>
+                    </li>
+                    <li class="active:font-bold hover:text-sky-500 dark:text-white dark:hover:text-sky-400 transition-colors">
+                        <a href="">Populer</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </main>
 
+            <!-- modul-main -->
+            <div class="m-auto w-full xl:m-0 relative flex gap-5 flex-col items-end justify-end">
+                
+                <!-- modul-category -->
+                <ul class="w-full flex gap-5 pb-5 max-w-screen-lg overflow-x-auto">
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">KJIJ</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">TAV</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">Geomatika</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">TITL</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">TKR</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">TBSM</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="py-2 px-4 text-base font-bold text-white border-2 hover:border-4 border-sky-500 rounded-full active:bg-sky-500">
+                            <a href="">Normatif&nbspAdaptif</a>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- modul-card -->
+                <section class="w-full max-w-screen-lg mb-7 grid grid-cols-1 lg:grid-cols-2 gap-6" id="modul">
+                    <div class="h-fit w-auto p-6 bg-white rounded-3xl shadow-2xl flex flex-col gap-6 group hover:translate-y-2 hover:shadow-xl transition-all dark:bg-gray-800">
+                        <div class="h-96 w-full relative flex self-center flex-shrink-0 rounded-2xl overflow-hidden">
+                            <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
+                            <div class="absolute w-full p-3 flex justify-between">
+                                <span class="px-3 py-2 bg-sky-500 rounded-xl text-white font-medium">
+                                    KJIJ
+                                </span>
+                                <button class="px-3 rounded-xl bg-sky-500 hover:bg-sky-600 border-none focus:ring-4 focus:outline-none focus:ring-sky-300">
+                                    <i class="bi bi-arrow-up-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl font-semibold text-black dark:text-white">Konstruksi Jalan Irigasi & Jembatan</h1>
+                            <p class="text-sm font-light text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam.</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="px-6 py-3 bg-sky-500 rounded-full flex items-center gap-3 text-white shadow-xl hover:translate-y-1 hover:shadow-none transition-all">
+                                <i class="bi bi-download"></i>
+                                <span class="text-sm font-bold">Download</span>
+                            </button>
+                            <span class="text-base font-medium text-gray-500">120 unduhan</span>
+                        </div>
+                    </div>
+                    <div class="h-fit w-auto p-6 bg-white rounded-3xl shadow-2xl flex flex-col gap-6 group hover:translate-y-2 hover:shadow-xl transition-all dark:bg-gray-800">
+                        <div class="h-96 w-full relative flex self-center flex-shrink-0 rounded-2xl overflow-hidden">
+                            <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
+                            <div class="absolute w-full p-3 flex justify-between">
+                                <span class="px-3 py-2 bg-sky-500 rounded-xl text-white font-medium">
+                                    KJIJ
+                                </span>
+                                <button class="px-3 rounded-xl bg-sky-500 hover:bg-sky-600 border-none focus:ring-4 focus:outline-none focus:ring-sky-300">
+                                    <i class="bi bi-arrow-up-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl font-semibold text-black dark:text-white">Konstruksi Jalan Irigasi & Jembatan</h1>
+                            <p class="text-sm font-light text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam.</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="px-6 py-3 bg-sky-500 rounded-full flex items-center gap-3 text-white shadow-xl hover:translate-y-1 hover:shadow-none transition-all">
+                                <i class="bi bi-download"></i>
+                                <span class="text-sm font-bold">Download</span>
+                            </button>
+                            <span class="text-base font-medium text-gray-500">120 unduhan</span>
+                        </div>
+                    </div>
+                    <div class="h-fit w-auto p-6 bg-white rounded-3xl shadow-2xl flex flex-col gap-6 group hover:translate-y-2 hover:shadow-xl transition-all dark:bg-gray-800">
+                        <div class="h-96 w-full relative flex self-center flex-shrink-0 rounded-2xl overflow-hidden">
+                            <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
+                            <div class="absolute w-full p-3 flex justify-between">
+                                <span class="px-3 py-2 bg-sky-500 rounded-xl text-white font-medium">
+                                    KJIJ
+                                </span>
+                                <button class="px-3 rounded-xl bg-sky-500 hover:bg-sky-600 border-none focus:ring-4 focus:outline-none focus:ring-sky-300">
+                                    <i class="bi bi-arrow-up-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl font-semibold text-black dark:text-white">Konstruksi Jalan Irigasi & Jembatan</h1>
+                            <p class="text-sm font-light text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam.</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="px-6 py-3 bg-sky-500 rounded-full flex items-center gap-3 text-white shadow-xl hover:translate-y-1 hover:shadow-none transition-all">
+                                <i class="bi bi-download"></i>
+                                <span class="text-sm font-bold">Download</span>
+                            </button>
+                            <span class="text-base font-medium text-gray-500">120 unduhan</span>
+                        </div>
+                    </div>
+                    <div class="h-fit w-auto p-6 bg-white rounded-3xl shadow-2xl flex flex-col gap-6 group hover:translate-y-2 hover:shadow-xl transition-all dark:bg-gray-800">
+                        <div class="h-96 w-full relative flex self-center flex-shrink-0 rounded-2xl overflow-hidden">
+                            <img src="https://picsum.photos/1080/1080" alt="major" class="h-full w-full object-cover group-hover:scale-110 transition-all">
+                            <div class="absolute w-full p-3 flex justify-between">
+                                <span class="px-3 py-2 bg-sky-500 rounded-xl text-white font-medium">
+                                    KJIJ
+                                </span>
+                                <button class="px-3 rounded-xl bg-sky-500 hover:bg-sky-600 border-none focus:ring-4 focus:outline-none focus:ring-sky-300">
+                                    <i class="bi bi-arrow-up-right text-white"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h1 class="text-2xl font-semibold text-black dark:text-white">Konstruksi Jalan Irigasi & Jembatan</h1>
+                            <p class="text-sm font-light text-black dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nam.</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="px-6 py-3 bg-sky-500 rounded-full flex items-center gap-3 text-white shadow-xl hover:translate-y-1 hover:shadow-none transition-all">
+                                <i class="bi bi-download"></i>
+                                <span class="text-sm font-bold">Download</span>
+                            </button>
+                            <span class="text-base font-medium text-gray-500">120 unduhan</span>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- INDICATOR -->
+                <div class="container mx-auto w-full flex flex-col md:flex-row mt-10 gap-5 items-center justify-end">
+                    <span class="text-sm font-light text-gray-500">menampilkan 9 dari 25 berita</span>
+                    <div class="flex gap-2">
+
+                        <!-- indicator-left -->
+                        <button class="h-9 w-9 flex items-center justify-center rounded-r-lg rounded-l-3xl bg-gray-300 dark:bg-gray-800 active:bg-sky-500 dark:active:bg-sky-400 hover:scale-105 transition">
+                            <i class="bi bi-chevron-left fa-sm text-white"></i>
+
+                        </button>
+
+                        <!-- indicator-number -->
+                        <div class="flex gap-2">
+                            <button class="h-9 w-12 rounded-lg bg-gray-300 dark:bg-gray-800 active:bg-sky-500 dark:active:bg-sky-400 hover:scale-105 transition">
+                                <span class="text-lg font-semibold text-white">1</span>
+                            </button>
+                            <button class="h-9 w-12 rounded-lg bg-gray-300 dark:bg-gray-800 active:bg-sky-500 dark:active:bg-sky-400 hover:scale-105 transition">
+                                <span class="text-lg font-semibold text-white">2</span>
+                            </button>
+                            <button class="h-9 w-12 rounded-lg bg-gray-300 dark:bg-gray-800 active:bg-sky-500 dark:active:bg-sky-400 hover:scale-105 transition">
+                                <span class="text-lg font-semibold text-white">3</span>
+                            </button>
+
+                        </div>
+
+                        <!-- indicator-right -->
+                        <button class="h-9 w-9 flex items-center justify-center rounded-l-lg rounded-r-3xl bg-gray-300 dark:bg-gray-800 active:bg-sky-500 dark:active:bg-sky-400 hover:scale-105 transition">
+                            <i class="bi bi-chevron-right fa-sm text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>            
+        </div>
     <footer>
 
         <!-- CONTACT -->
-        <div  class="mt-20 py-8 lg:py-16 bg-gray-300 rounded-t-3xl dark:bg-gray-700">
+        <section  class="mt-20 py-8 lg:py-16 bg-gray-300 rounded-t-3xl dark:bg-gray-700">
             <div class="container flex flex-col justify-between m-auto">
                 
                 <!-- contact-description -->
@@ -391,16 +471,16 @@
                         <ul class="flex flex-col gap-3 lg:gap-4">
                             <li class="lg:text-xl font-semibold">Link Berguna</li>
                             <li>
-                                <a href="#">Dashboard Sekolah</a>
+                                <a href="#" class="hover:font-medium">Dashboard Sekolah</a>
                             </li>
                             <li>
-                                <a href="#">Tata Usaha Sekolah</a>
+                                <a href="#" class="hover:font-medium">Bursa Kerja SMKa (BUKA)</a>
                             </li>
                             <li>
-                                <a href="#">E-Learning</a>
+                                <a href="#" class="hover:font-medium">E-Learning</a>
                             </li>
-                            <li class="text-sm lg:text-base mt-3 font-bold">
-                                <a href="#">Masuk/Login</a>
+                            <li>
+                                <a href="#" class="hover:font-medium">Login Admin</a>
                             </li>
                         </ul>
                     </li>
@@ -412,7 +492,7 @@
                     <span class="text-sm font-semibold">Hak Cipta @ SMKN 2 Kupang 2022</span>
                 </div>
             </div>
-        </div>
+        </section>
     </footer>
     <script>
 
